@@ -5,7 +5,7 @@ import CartContext from '../../context/CartContext'
 
 import './index.css'
 
-const Navbar = props => {
+const Navbar = withRouter((props) => {
   const onClickLogout = () => {
     const {history} = props
     Cookies.remove('jwt_token')
@@ -121,6 +121,6 @@ const Navbar = props => {
       </div>
     </nav>
   )
-}
+})
 
 export default Navbar
